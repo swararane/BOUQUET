@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>BUILD A BOUQUET</title>
+        <link rel="stylesheet" href="landing.css">
+    </head>
+    <body>
+        <!-- Music Toggle Button -->
+        <div class="music-control">
+            <button id="musicToggle" class="music-btn" onclick="toggleMusic()" aria-label="Toggle music">
+                🔇
+            </button>
+        </div>
+
+        <!-- Background Music -->
+        <audio id="bgMusic" loop>
+            <source src="music/background.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <section class="landing">
+            <h1>BUILD A BOUQUET</h1>
+            <p class="subtitle">a custom flower bouquet maker</p>
+            <div class="bouquet-images">
+                <img src="images/bouquet_images/lilies and clovers.png" alt="lilies and clovers">
+                <img src="images/bouquet_images/roses and daisies.png" alt="roses and daisies">
+                <img src="images/bouquet_images/poppies and violets.png" alt="poppies and violets">
+                <img src="images/bouquet_images/sunflowers and primroses.png" alt="sunflowers and primroses">
+            </div>
+            <a href="builder.html" class="start-btn">START BUILDING</a>
+        </section>
+
+        <script src="music-player.js"></script>
+    </body>
+</html>

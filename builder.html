@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build Your Bouquet</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Music Toggle Button -->
+  <div class="music-control">
+    <button id="musicToggle" class="music-btn" onclick="toggleMusic()" aria-label="Toggle music">
+      🔇
+    </button>
+  </div>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" loop>
+    <source src="music/background.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <header>
+    <h1>🌷 Build Your Bouquet 🌷</h1>
+    <p>Choose your main and support flowers, write a message, and create your bouquet!</p>
+  </header>
+
+  <main>
+    <div class="form-section">
+      <div class="flower-section">
+        <h2>Main Flower</h2>
+        <div class="transparent-container">
+          <div id="mainFlowers" class="flower-gallery"></div>
+        </div>
+      </div>
+
+      <div class="flower-section">
+        <h2>Support Flower</h2>
+        <div class="transparent-container">
+          <div id="supportFlowers" class="flower-gallery"></div>
+        </div>
+      </div>
+
+      <div class="message-section">
+        <div class="message-box-container">
+          <label for="userMessage">Your Message:</label>
+          <div class="message-input-wrapper">
+            <textarea id="userMessage" placeholder="Write something special for your bouquet..."></textarea>
+            <div class="message-decoration">💕</div>
+          </div>
+        </div>
+      </div>
+
+      <button id="generateBtn" class="create-btn">Create Bouquet</button>
+    </div>
+
+    <div id="bouquetPreview" class="preview"></div>
+    <button id="downloadBtn" class="download-btn" style="display:none;">Download Bouquet</button>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="music-player.js"></script>
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
